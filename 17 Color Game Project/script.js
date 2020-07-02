@@ -49,7 +49,7 @@ resetButton.addEventListener("click", function(){
 	for(var i=0;i<squares.length; ++i){
 		squares[i].style.backgroundColor = colors[i];
 	}
-	h1.style.backgroundColor = "#232323";
+	h1.style.backgroundColor = "steelblue";
 	resetButton.textContent = "New Colors";
 });
 
@@ -68,7 +68,7 @@ for(var i=0;i<squares.length;++i){
 			messageDisplay.textContent = "Correct!";
 			h1.style.backgroundColor = clickedColor;
 			changeColors(clickedColor);
-			resetButton.textContent = "PLAY AGAIN?";
+			resetButton.textContent = "PLAY AGAIN";
 		}
 		else{
 			this.style.backgroundColor = "#232323";
@@ -105,9 +105,9 @@ function generateRandomColors(num){
 function randomColor(){
 	//pick a red from 0-255
 	var red=Math.floor(Math.random()*256);
-	//pick a green from 0-255
+	//pick green from 0-255
 	var green=Math.floor(Math.random()*256);
-	//pick a blue from 0-255
+	//pick blue from 0-255
 	var blue=Math.floor(Math.random()*256);
 	//"rgb(r, g, b)"
 	return "rgb("+red+", "+green+", "+blue+")";
